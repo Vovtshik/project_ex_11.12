@@ -7,7 +7,7 @@ void out_file_text(vector<string>& vs, string& name_file);
 
 int main()
 {
-    vector<string>vs;
+ vector<string>vs;
     cout << "Enter file name to read text:\n";
     string name;
     cin >> name;
@@ -29,9 +29,19 @@ void in_file_text(string& name_file, vector<string>&vs)
     ifstream ist(name_file);
     if(!ist) error("Unable to open input file ", name_file);
     ist.exceptions(ist.exceptions() | ios_base::badbit);
-    for(string temp; ist >> temp;)
+    string new_line = "\n";
+    //vs.push_back(new_line);
+    for(string temp; getline(ist, temp);)
     {
-        vs.push_back(temp);
+        {
+            stringstream ss(temp);
+            for(string s; ss >> s;)
+            {
+                vs.push_back(s);
+            }
+        }
+        if(!ist.eof())
+            vs.push_back(new_line);
     }
 }
 
@@ -46,11 +56,16 @@ void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
 string change_order_characters(string& str)
 {
     string temp;
-    for(int i = str.size(); i > 0; --i)
+    if(str == "\n")
+        return str;
+    else
     {
-        temp += str[i - 1];
+        for(int i = str.size(); i > 0; --i)
+        {
+            temp += str[i - 1];
+        }
+        return temp;
     }
-    return temp;
 }
 
 void out_file_text(vector<string>& vs, string& name_file)
@@ -59,6 +74,11 @@ void out_file_text(vector<string>& vs, string& name_file)
    if (!ost) error("Unable to open output file ", name_file);
    for(string x: vs)
    {
-       ost << x << '\n'; 
+        if(x != "\n")
+            ost << x << " ";
+        else
+        {
+            ost << x;
+        }
    }
 }
