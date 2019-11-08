@@ -65,3 +65,13 @@ string change_order_characters(string& str)
     }
     return temp;
 }
+
+void out_file_text(vector<string>& vs, string& name_file)
+{
+    ofstream ost{name_file};
+   if (!ost) error("Unable to open output file ", name_file);
+   for(string x: vs)
+   {
+       ost << x << '\n'; 
+   }
+}
