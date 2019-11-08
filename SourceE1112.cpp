@@ -35,3 +35,13 @@ void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
         vs2.push_back(vs1[i-1]);
     }
 }
+
+string Change_order_characters(string& str)
+{
+    string temp;
+    for(int i = str.size(); i > 0; --i)
+    {
+        temp += str[i - 1];
+    }
+    return temp;
+}
