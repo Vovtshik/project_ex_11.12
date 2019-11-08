@@ -8,13 +8,19 @@ void out_file_text(vector<string>& vs, string& name_file);
 int main()
 {
     vector<string>vs;
-    cout << "Enter file name:\n";
+    cout << "Enter file name to read text:\n";
     string name;
     cin >> name;
     in_file_text(name, vs);
     vector<string>vsr;
     reverse_word_order(vs, vsr);
-    return 0;
+    for(string& s: vsr)
+    {
+        s = change_order_characters(s);
+    }
+    cout << "Enter a file name for recording converted text:\n";
+    cin >> name;
+    out_file_text(v
 }
 
 void in_file_text(string& name_file, vector<string>&vs)
