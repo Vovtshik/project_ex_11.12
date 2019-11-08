@@ -67,7 +67,7 @@ string change_order_characters(string& str)
 {
     string temp;
     if(str == "\n")
-        return temp;
+        return str;
     else
     {
         for(int i = str.size(); i > 0; --i)
@@ -96,6 +96,13 @@ void out_file_text(vector<string>& vs, string& name_file)
    if (!ost) error("Unable to open output file ", name_file);
    for(string x: vs)
    {
-       ost << x << '\n'; 
+        if(x != "\n")
+            ost << x << " ";
+        else
+        {
+            ost << "\n";
+        }
+        
+        
    }
 }
