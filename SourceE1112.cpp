@@ -44,17 +44,6 @@ void in_file_text(string& name_file, vector<string>&vs)
     }
 }
 
-/* void in_file_text(string& name_file, vector<string>&vs)
-{
-    ifstream ist(name_file);
-    if(!ist) error("Unable to open input file ", name_file);
-    ist.exceptions(ist.exceptions() | ios_base::badbit);
-    for(string temp; ist >> temp;)
-    {
-        vs.push_back(temp);
-    }
-} */
-
 void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
 {
     for(int i = vs1.size(); i > 0; --i)
@@ -79,16 +68,6 @@ string change_order_characters(string& str)
     
     
 } 
-
-/* string change_order_characters(string& str)
-{
-    string temp;
-    for(int i = str.size(); i > 0; --i)
-    {
-        temp += str[i - 1];
-    }
-    return temp;
-} */
 
 void out_file_text(vector<string>& vs, string& name_file)
 {
