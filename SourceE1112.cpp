@@ -30,7 +30,7 @@ void in_file_text(string& name_file, vector<string>&vs)
     if(!ist) error("Unable to open input file ", name_file);
     ist.exceptions(ist.exceptions() | ios_base::badbit);
     string new_line = "\n";
-    vs.push_back(new_line);
+    //vs.push_back(new_line);
     for(string temp; getline(ist, temp);)
     {
         {
