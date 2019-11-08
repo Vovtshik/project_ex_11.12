@@ -14,6 +14,10 @@ int main()
     in_file_text(name, vs);
     vector<string>vsr;
     reverse_word_order(vs, vsr);
+    for(string& s: vsr)
+    {
+        s = change_order_characters(s);
+    }
     return 0;
 }
 
@@ -44,4 +48,14 @@ string change_order_characters(string& str)
         temp += str[i - 1];
     }
     return temp;
+}
+
+void out_file_text(vector<string>& vs, string& name_file)
+{
+    ofstream ost{name_file};
+   if (!ost) error("Unable to open output file ", name_file);
+   for(string x: vs)
+   {
+       ost << x << '\n'; 
+   }
 }
