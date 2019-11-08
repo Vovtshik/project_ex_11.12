@@ -7,7 +7,7 @@ void out_file_text(vector<string>& vs, string& name_file);
 
 int main()
 {
-    vector<string>vs;
+   vector<string>vs;
     cout << "Enter file name to read text:\n";
     string name;
     cin >> name;
@@ -20,7 +20,8 @@ int main()
     }
     cout << "Enter a file name for recording converted text:\n";
     cin >> name;
-    out_file_text(v
+    out_file_text(vsr, name);
+    return 0;
 }
 
 void in_file_text(string& name_file, vector<string>&vs)
