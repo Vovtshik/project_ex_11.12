@@ -40,9 +40,7 @@ void in_file_text(string& name_file, vector<string>&vs)
                 vs.push_back(s);
             }
         }
-        
-        if(!ist.eof())
-            vs.push_back(new_line);
+        vs.push_back(new_line);
     }
 }
 
