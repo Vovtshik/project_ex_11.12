@@ -7,7 +7,7 @@ void out_file_text(vector<string>& vs, string& name_file);
 
 int main()
 {
-   vector<string>vs;
+ vector<string>vs;
     cout << "Enter file name to read text:\n";
     string name;
     cin >> name;
@@ -66,9 +66,7 @@ string change_order_characters(string& str)
         }
         return temp;
     }
-    
-    
-} 
+}
 
 void out_file_text(vector<string>& vs, string& name_file)
 {
