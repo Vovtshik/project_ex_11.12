@@ -37,7 +37,7 @@ void in_file_text(string& name_file, vector<string>&vs)
             stringstream ss(temp);
             for(string s; ss >> s;)
             {
-                vs.push_back(temp);
+                vs.push_back(s);
             }
         }
         vs.push_back(new_line);
