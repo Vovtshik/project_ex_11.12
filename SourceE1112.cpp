@@ -22,11 +22,31 @@ void in_file_text(string& name_file, vector<string>&vs)
     ifstream ist(name_file);
     if(!ist) error("Unable to open input file ", name_file);
     ist.exceptions(ist.exceptions() | ios_base::badbit);
+    string new_line = "\n";
+    vs.push_back(new_line);
+    for(string temp; getline(ist, temp);)
+    {
+        {
+            stringstream ss(temp);
+            for(string s; ss >> s;)
+            {
+                vs.push_back(temp);
+            }
+        }
+        vs.push_back(new_line);
+    }
+}
+
+/* void in_file_text(string& name_file, vector<string>&vs)
+{
+    ifstream ist(name_file);
+    if(!ist) error("Unable to open input file ", name_file);
+    ist.exceptions(ist.exceptions() | ios_base::badbit);
     for(string temp; ist >> temp;)
     {
         vs.push_back(temp);
     }
-}
+} */
 
 void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
 {
