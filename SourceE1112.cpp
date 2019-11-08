@@ -66,12 +66,29 @@ void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
 string change_order_characters(string& str)
 {
     string temp;
+    if(str == "\n")
+        return temp;
+    else
+    {
+        for(int i = str.size(); i > 0; --i)
+        {
+            temp += str[i - 1];
+        }
+        return temp;
+    }
+    
+    
+} 
+
+/* string change_order_characters(string& str)
+{
+    string temp;
     for(int i = str.size(); i > 0; --i)
     {
         temp += str[i - 1];
     }
     return temp;
-}
+} */
 
 void out_file_text(vector<string>& vs, string& name_file)
 {
