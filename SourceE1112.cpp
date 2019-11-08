@@ -8,7 +8,7 @@ void out_file_text(vector<string>& vs, string& name_file);
 int main()
 {
     vector<string>vs;
-    cout << "Enter file name:\n";
+    cout << "Enter file name to read text:\n";
     string name;
     cin >> name;
     in_file_text(name, vs);
@@ -18,6 +18,9 @@ int main()
     {
         s = change_order_characters(s);
     }
+    cout << "Enter a file name for recording converted text:\n";
+    cin >> name;
+    out_file_text(vsr, name);
     return 0;
 }
 
