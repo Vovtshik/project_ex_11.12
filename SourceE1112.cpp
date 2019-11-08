@@ -14,10 +14,6 @@ int main()
     in_file_text(name, vs);
     vector<string>vsr;
     reverse_word_order(vs, vsr);
-    for(string str: vsr)
-    {
-        cout << str << '\n';
-    }
     return 0;
 }
 
