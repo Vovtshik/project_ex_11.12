@@ -25,3 +25,11 @@ void in_file_text(string& name_file, vector<string>&vs)
         vs.push_back(temp);
     }
 }
+
+void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
+{
+    for(int i = vs1.size(); i > 0; --i)
+    {
+        vs2.push_back(vs1[i-1]);
+    }
+}
