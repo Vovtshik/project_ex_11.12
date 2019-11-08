@@ -81,7 +81,5 @@ void out_file_text(vector<string>& vs, string& name_file)
         {
             ost << "\n";
         }
-        
-        
    }
 }
