@@ -79,7 +79,7 @@ void out_file_text(vector<string>& vs, string& name_file)
             ost << x << " ";
         else
         {
-            ost << "\n";
+            ost << x;
         }
    }
 }
