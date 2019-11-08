@@ -12,6 +12,8 @@ int main()
     string name;
     cin >> name;
     in_file_text(name, vs);
+    vector<string>vsr;
+    reverse_word_order(vs, vsr);
     return 0;
 }
 
@@ -23,5 +25,13 @@ void in_file_text(string& name_file, vector<string>&vs)
     for(string temp; ist >> temp;)
     {
         vs.push_back(temp);
+    }
+}
+
+void reverse_word_order(vector<string>& vs1, vector<string>& vs2)
+{
+    for(int i = vs1.size(); i > 0; --i)
+    {
+        vs2.push_back(vs1[i-1]);
     }
 }
