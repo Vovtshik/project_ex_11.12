@@ -1,9 +1,9 @@
 #include "../std_lib_facilities.h"
 
-void in_file_text(string& name_file, vector<string>&vs);
-void reverse_word_order(vector<string>& vs1, vector<string>& vs2);
-string change_order_characters(string& str);
-void out_file_text(vector<string>& vs, string& name_file);
+void in_file_text(string& name_file, vector<string>&vs);            // The function of reading text from file to vector.
+void reverse_word_order(vector<string>& vs1, vector<string>& vs2);  // The function of rearranging words in the text in reverse order.
+string change_order_characters(string& str);                        // The function of rearranging letters in a word in reverse order.
+void out_file_text(vector<string>& vs, string& name_file);          // The function of writing text from a vector to a file.
 
 int main()
 {
